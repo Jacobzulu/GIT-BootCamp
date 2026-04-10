@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Coffee House - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Aurora Coffee House Logo" width="60">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Contact Us</h1>
+            <p><em>We'd love to hear from you</em></p>
+        </section>
+
+        <section class="contact-section" id="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="https://formspree.io/f/xbdpvkal" method="post" id="contact-form-element">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" id="fullname" name="name" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+234 XXX XXX XXXX">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Message Details</legend>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="catering">Catering Request</option>
+                            <option value="events">Event Booking</option>
+                            <option value="careers">Career Opportunities</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell us how we can help you..."></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="newsletter">
+                            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                            Subscribe to our newsletter for updates and special offers
+                        </label>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <p id="form-status" style="margin-top: 1rem; display: none;"></p>
+        </section>
+
+        <section class="contact-section" id="location">
+            <h2>Visit Us</h2>
+            <div class="location-info">
+                <address>
+                    <strong>Aurora Coffee House</strong><br>
+                    123 Coffee Street<br>
+                    Victoria Island, Lagos<br>
+                    Nigeria<br>
+                    <a href="mailto:info@auroracoffee.com">info@auroracoffee.com</a><br>
+                    <a href="tel:+2341234567890">+234 123 456 7890</a>
+                </address>
+                <figure>
+                    <img src="images/location.jpg" alt="Map showing location of Aurora Coffee House" width="400">
+                    <figcaption>Our location on Victoria Island</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="contact-section" id="hours">
+            <h2>Hours of Operation</h2>
+            <table>
+                <caption>Our operating hours</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Monday - Friday</th>
+                        <td>7:00 AM - 7:00 PM</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Saturday</th>
+                        <td>8:00 AM - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sunday</th>
+                        <td>8:00 AM - 5:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="contact-section" id="social">
+            <h2>Follow Us</h2>
+            <ul class="social-links">
+                <li><a href="https://www.instagram.com/auroracoffee" target="_blank" rel="noopener" title="Follow us on Instagram">Instagram</a></li>
+                <li><a href="https://www.facebook.com/auroracoffee" target="_blank" rel="noopener" title="Like us on Facebook">Facebook</a></li>
+                <li><a href="https://www.twitter.com/auroracoffee" target="_blank" rel="noopener" title="Follow us on Twitter">Twitter</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Aurora Coffee House. All rights reserved.</p>
+        <p class="highlight">Hours: Mon-Fri 7AM-7PM, Sat-Sun 8AM-6PM</p>
+    </footer>
+
+    <script>
+        // Initialize Formspree form
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form-element');
+            const statusDiv = document.getElementById('form-status');
+
+            form.addEventListener('submit', function(e) {
+                // FormSpree handles the submission automatically
+                // Show a message to the user
+                statusDiv.style.display = 'none';
+                
+                // Let FormSpree handle the redirect after successful submission
+                // You can also add custom handling if needed
+            });
+        });
+    </script>
+</body>
+</html>
